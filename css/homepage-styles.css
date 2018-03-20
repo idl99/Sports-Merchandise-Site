@@ -8,7 +8,7 @@ body{
 } 
 
 iframe{
-	border: 1px solid gray;
+	border: none;
 	width:100%;
 }
 
