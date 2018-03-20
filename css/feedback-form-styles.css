@@ -1,6 +1,6 @@
 body{
 	padding:50px;
-	background-image:url("pics/FormBackground.jpg");
+	background-image:url("../resources/graphics/feedback-form-bg.jpg");
 	background-repeat:no-repeat;
     background-attachment:scroll;
 	font-family: 'Iceland', cursive;
