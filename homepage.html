@@ -4,17 +4,19 @@
 			<title>Main Page</title>
 			<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
 			<link rel="stylesheet" type="text/css" href="css/homepage-styles.css">
-			
 		</head>
 		<body>
+
+			<div id="font-size-slider-div">
+					<input id="font-size-slider" onchange="resizeFont()" type="range" min="1" max="5" value="3"/>
+			</div>
+
 			<div class="top">
-				<a class="active" href="Main.html" style="margin-left: 400px;">Home</a>
+				<a class="active" href="homepage.html">Home</a>
 				<a href="../product-order/order.html">Shop</a>
 			    <a href="#">Quiz</a>
 			    <a href="#">Portfolio</a>
 				<a href="feedback-form.html">Feedback</a>
-				<button class="submit">Go</button>
-				<input type="text" placeholder="Search.." name="search">
 			</div>
 
 			<div class="carousel">
@@ -27,14 +29,21 @@
 				<p>Last modified date (Ex:13th of January 2018)</p>
 				<p>dehami.2016198@iit.ac.lk</p>
 			</footer>
-			<!-- <script>
-				function feedback(){
-					document.getElementById("change").carouselWindow.document.location.href="Form.html";
-					document.getElementBy
-				}
-				function home(){
-					document.getElementById("change").carouselWindow.document.location.href="HomePage.html";
-				}
-			</script> -->
+			<script>
+				let scaleValue = parseInt(document.getElementById("font-size-slider").value);
+
+				function resizeFont(){
+					let newScaleValue = parseInt(document.getElementById("font-size-slider").value);
+					let elements = document.querySelector("body").children;
+					for(var i=0; i<elements.length; i++){
+						for(var x=0; x<elements[i].children.length; x++){
+							let initial = parseInt(window.getComputedStyle(elements[i].children[x],null).fontSize);
+                    		let newSize = initial+((newScaleValue-scaleValue)*2.5);
+                    		elements[i].children[x].setAttribute("style","font-size:"+newSize+"px");
+						}
+					}	
+					scaleValue = newScaleValue;
+				};
+			</script>
 		</body>
 	</html>
