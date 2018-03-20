@@ -134,6 +134,9 @@ a:active {
 textarea, select, select > option, input{
     color: black !important;
 }
+i{
+    color: white;
+}
 body{
 	background-image: url("../resources/graphics/main-bg.jpg");
     height: 100%; 
