@@ -26,9 +26,6 @@ function isAllFieldsChosen(){
     if(isAllProductTypesChosen && isAllProductSizeChosen)
         submitFormButton.disabled = false;
     else if(!isAllProductTypesChosen || !isAllProductSizeChosen) submitFormButton.disabled = true;
-
-    console.log(isAllProductTypesChosen+" "+isAllProductSizeChosen);
-
 };
 
 function processOrder() {
