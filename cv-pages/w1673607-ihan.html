@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #firstName{
+            color: goldenrod;
+            font-size: 3.5em;
+        }
+        #profile-pic{
+            border-radius:50px;
+            height: 250px;
+            margin: auto;
+        }
+        #cv-header>h1{
+            display: inline;
+        }
+        #cv-header{
+            color: white;
+            font-size: 18px;
+            display: inline;
+            text-align: center;
+            margin: auto auto
+        }
+        .cv-section{
+            border: 1px solid white;
+            font-size: 14px;
+            line-height: 40px;
+            font-weight: 750;
+            color: black;
+            grid-column: 1/3;
+            font-family: "Open Sans";
+            padding: 20px;
+            background-color: rgba(255,255,255,.75);
+        }
+        #cv-header{
+            font-family: monospace;
+            font-size: 16px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-gap: 25px;
+            margin: auto auto;
+            width: 50%
+        }
+        body{
+            background-image: url("wallpaper.jpg");
+            background-repeat: repeat-y;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="cv-header">
+            <h1 id="firstName">Ihan</h1>
+            <h1>Lelwala</h1>
+            <h2>Informatics Institute of Technology</h2>
+            <h2>ihan.2016030@iit.ac.lk</h2>
+            <h2>0779811033</h2>
+        </div>
+        
+        <img src="w1673607-ihan.jpg" id="profile-pic" alt="My profile picture" />
+
+        <div class="cv-section">
+            <h1>Personal Details</h1>
+            <p>Hi, I'm Ihan Lelwala. I was born on October 7th,1999 and as of now I am 18 years old. 
+                I'm from Sri Lanka, and I currently reside in Dehiwala, a suburb of Colombo. 
+                My primary interests involve discovering, reading about, and exploring new technologies and innovations.
+                I'm also a big football fan, and I support Liverpool FC. 
+            </p>
+        </div>
+        
+        <div class="cv-section">
+            <h1>Educational Profile</h1>
+            <p>
+                I received my primary education at Colombo South International College, Kalubowila. 
+                Afterwards, I continued my secondary education at St.Peter's College, Colombo 04, 
+                and remained there until completion of my G.C.E. Ordinary Level examination, where I received 9 "A" passes.
+                After a brief period away from studies, I joined IIT in September 2016, to follow the Foundation Certificate Course Batch-top. 
+                I'm currently a first year student in the BEng. Software Engineering degree program.
+            </p>
+        </div>
+
+        <div class="cv-section">
+            <h1>Awards and Achievements</h1>
+            <ul>
+                <li id="award">
+                    G.C.E. O/L Examination 2015
+                </li>
+                <li>
+                    Dr. Gamini Wickramasinghe Gold Medal 
+                    for Academic Excellence 2016/2017
+                </li>
+                <li>
+                    Certificate of Honor - Cutting Edge 2017, IIT's 
+                    annual business and tech innovation exhibition
+                </li>
+                <li>
+                    Codesprint 3.0 2018 - Grand Finalist
+                </li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <h1>Skills</h1>
+            <ul>
+                <li>Web Development
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>jQuery</li>
+                        <li>Bootstrap</li>
+                        <li>WordPress</li>
+                    </ul>
+                </li>
+                <li>Desktop/GUI Applications
+                    <ul>
+                        <li>Java</li>
+                        <li>Java Swing</li>
+                        <li>Java FX</li>
+                        <li>Python</li>
+                    </ul>
+                </li>
+                <li>Databases
+                    <ul>
+                        <li>Microsoft SQL</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul> 
+                </li>
+                <li>Arduino</li>
+                <li>Other Tools
+                    <ul>
+                        <li>Git</li>
+                        <li>Terminal/Command Line</li>
+                        <li>Morphia ODM for Mongo</li>
+                        <li>Maven</li>
+                        <li>IntelliJ IDEA</li>
+                        <li>VS Code</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

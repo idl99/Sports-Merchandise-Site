@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #font-size-slider-div>*{
+            float: right;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0px auto;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div id="font-size-slider-div">
+        <input id="font-size-slider" onchange="resizeFont()" type="range" min="1" max="5" value="3"/>
+    </div>
+    <h1>What is Lorem Ipsum?</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+         ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+         desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <script>
+        let scaleValue = parseInt(document.getElementById("font-size-slider").value);
+
+        function resizeFont(){
+            console.log(scaleValue);
+            let newScaleValue = parseInt(document.getElementById("font-size-slider").value);
+            console.log(newScaleValue);
+            let elements = document.querySelectorAll("body")[0].children;
+            for(var i=0; i<elements.length; i++){
+                if(elements[i].style){
+                    let initial = parseInt(window.getComputedStyle(elements[i],null).fontSize);
+                    let newSize = newScaleValue>scaleValue ? ++initial: --initial;
+                    elements[i].setAttribute("style","font-size:"+newSize+"px");
+                }
+            };
+            scaleValue = newScaleValue;
+        }
+    </script>
+</body>
+</html>

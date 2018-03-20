@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #firstName{
+            color: goldenrod;
+            font-size: 3.5em;
+        }
+        #profile-pic{
+            border-radius:50px;
+            height: 250px;
+            margin: auto;
+        }
+        #cv-header>h1{
+            display: inline;
+        }
+        #cv-header{
+            color: white;
+            font-size: 18px;
+            display: inline;
+            text-align: center;
+            margin: auto auto
+        }
+        .cv-section{
+            border: 1px solid white;
+            font-size: 14px;
+            line-height: 40px;
+            font-weight: 750;
+            color: black;
+            grid-column: 1/3;
+            font-family: "Open Sans";
+            padding: 20px;
+            background-color: rgba(255,255,255,.75);
+        }
+        #cv-header{
+            font-family: monospace;
+            font-size: 16px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-gap: 25px;
+            margin: auto auto;
+            width: 50%
+        }
+        body{
+            background-image: url("wallpaper.jpg");
+            background-repeat: repeat-y;
+			text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="cv-header">
+            <h1 id="firstName">Deshan</h1>
+            <h1>Koswatte</h1>
+            <h2>Informatics Institute of Technology</h2>
+            <h2>dehami.2016198@iit.ac.lk</h2>
+            <h2>0773884997</h2>
+        </div>
+        
+        <img src="w1673620-deshan.jpg" id="profile-pic" alt="My profile picture" />
+
+        <div class="cv-section">
+            <h1>Personal Details</h1>
+            <p>I'm Deshan Koswatte. I was born on 1999 October 20th currently being over years old. I was born in 
+				Rathnapura. I have a few hobbies, which includes programming, reading. But mainly swimming as I have won
+				many awards in the recent past but unfortunately I had to stop swimming because I'm running out of
+				time with the acedemic work. Currently I'm following the degree course at IIT to be a software engineer.
+            </p>
+        </div>
+        
+        <div class="cv-section">
+            <h1>Educational Profile</h1>
+            <p>
+				In my primary stages I studied at Royal International School, Kurunegala.
+				Then at the seventh grade I moved onto Gateway College, Colombo for my secondary level education,
+				at the eleveth grade I had my I.G.C.S.E. Ordinary Level examination where I received 9 "A" passes included with 3 "B" passes.
+				In 2016 September I joined IIT without doing my Advanced Level examinations so I had to follow the foundation program and finished
+				it off with a Distinction pass and currently I'm following the Software Engineering course and is at the first year of education in 
+				the program.				
+            </p>
+        </div>
+
+        <div class="cv-section">
+            <h1>Awards and Achievements</h1>
+            <ul>
+                <li id="award">
+                    I.G.C.S.E. O/L Examination 2016
+                </li>
+                <li>
+                    Codesprint 3.0 2018 - Grand Finalist
+                </li>
+				<li>
+					Gateway College - Champion Swimmer
+					2013/2014/2016
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <h1>Skills</h1>
+            <ul>
+                <li>Web Development
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Bootstrap</li>
+                        <li>WordPress</li>
+                    </ul>
+                </li>
+                <li>Desktop/GUI Applications
+                    <ul>
+                        <li>Java</li>
+                        <li>Java Swing</li>
+                        <li>Java FX</li>
+                        <li>Python</li>
+                    </ul>
+                </li>
+                <li>Databases
+                    <ul>
+                        <li>Microsoft SQL</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul> 
+                </li>
+                <li>Arduino</li>
+                <li>Other Tools
+                    <ul>
+                        <li>Git</li>
+                        <li>Terminal/Command Line</li>
+                        <li>Morphia ODM for Mongo</li>
+                        <li>Maven</li>
+                        <li>IntelliJ IDEA</li>
+                        <li>VS Code</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE>
+	<html>
+		<head>
+			<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+			<style>
+				body{
+					background-color: transparent;
+					border: 1px solid #f1f1f1;
+				}
+				.shopnow{
+					position: relative;
+					max-width:100%;
+					max-height:600px;
+				}
+				.images {
+					display:none;
+					animation:opacity;
+					animation-duration: 1.5s; 
+				}
+				@keyframes opacity {
+				  from {opacity: .4}
+				  to {opacity: 1}
+				}
+				.button{	
+					background-color: #555;
+					border: 1px solid gray;
+					display: inline-block;
+					font-family: garamond;
+					font-size: 25px;
+					color: white;
+					padding: 8px 16px;
+					text-decoration: none;
+				}
+				.button:hover{
+					background-color: green;
+					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+					color: #ffffff;
+				}
+				.button:active{
+					transform: translateY(4px);
+				}
+				.btnShopNow{
+					position: absolute;
+					top:40%;
+					left:35%;
+					font-family: 'Iceland', cursive;
+					font-size: 50px;
+					font-weight: bold;
+					opacity: 0.9;
+					height: 100px;
+					width: 400px;
+					background-color: greenyellow;
+					color:black;
+				}
+				.btnShopNow>a{
+					color: black;
+					text-decoration: none;
+				}
+
+				.btnShopNow:hover>a{
+					color:white;
+				}
+
+				#next{
+					float:right; 
+					position: absolute; 
+					bottom: 250px; 
+					right: 8px; 
+					height:100px; 
+					opacity: 0.7;
+				}
+				#previous{
+					float:left; 
+					position: absolute; 
+					bottom: 250px; 
+					left: 8px; 
+					height:100px; 
+					opacity: 0.7;
+				}
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			</style>
+			<title>Home Page</title>
+		</head>
+		<body>
+			<div class="shopnow">
+				<div class="images">
+					<img src="Image1.jpg">
+						<button id="next" onclick="next()" class="button">></button>
+						<button id="previous" onclick="previous()" class="button"><</button>
+						<button class="button btnShopNow" onclick="navigate(this)">
+							<a target="_blank" href="../product-order/order.html">Shop Now >></a> 
+						</button>
+					</img>
+				</div>
+				<div class="images">
+					<img src="Image2.jpg">
+						<button id="next" onclick="next()" class="button">></button>
+						<button id="previous" onclick="previous()" class="button"><</button>
+						<button class="button btnShopNow" onclick="navigate(this)">
+							<a target="_blank" href="../product-order/order.html">Shop Now >></a>
+						</button>
+					</img>
+				</div>
+				<div class="images">
+					<img src="Image3.jpg">
+						<button id="next" onclick="next()" class="button">></button>
+						<button id="previous" onclick="previous()" class="button"><</button>
+						<button class="button btnShopNow" onclick="navigate(this)">
+							<a target="_blank" href="../product-order/order.html">Shop Now >></a>
+						</button>
+					</img>
+				</div>
+			</div>
+			<script>
+				var myIndex = 0;
+				autoSlides();
+
+				function autoSlides() {
+					var i;
+					var x = document.getElementsByClassName("images");
+					for (i = 0; i < x.length; i++) {
+					   x[i].style.display = "none";  
+					}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}    
+					x[myIndex-1].style.display = "block";  
+					setTimeout(autoSlides, 5000); 
+				}
+				function next(){
+					var i;
+					var x = document.getElementsByClassName("images");
+					for (i = 0; i < x.length; i++) {
+					   x[i].style.display = "none";  
+					}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}    
+					x[myIndex-1].style.display = "block";
+					x[myIndex-1].style.position = "relative";
+				}
+				function previous(){
+					var i;
+					var x = document.getElementsByClassName("images");
+					for (i = 0; i < x.length; i++) {
+					   x[i].style.display = "none";  
+					}
+					myIndex--;
+					if (myIndex < 1) {myIndex = 3}    
+					x[myIndex-1].style.display = "block";
+					x[myIndex-1].style.position = "relative";
+				}
+				function navigate(link){
+					window.parent.location.assign(link.children[0].href);
+				}
+			</script>
+		</body>
+	</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<html>
+		<head> 
+		<link rel="stylesheet" type="text/css" href="css/FormStyles.css">
+		<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+			<title>Feedback Form </title>
+		</head>
+		<body> 
+			<div class="top">
+				<a href="Main.html">Home</a>
+				<a href="#news">News</a>
+			    <a href="#contact">Contact</a>
+			    <a href="#about">About</a>
+				<a class="active" href="Form.html">Feedback</a>
+			</div>	
+			<h3>Comments Form</h3>
+			<div>
+				<form>
+					<label>Full name:</label>
+					<input id="fName" type="text" name="fullName" placeholder="Full Name"/><br/><br/>
+					<label>Email:</label>
+					<input id="email" type="text" name="email" placeholder="Email Address"/><br/><br/>
+					<label>Rating:</label>
+					<input type="radio" name="rating" value="Excellent" checked="checked">Excellent
+					<input type="radio" name="rating" value="Very Good"/>Very Good
+					<input type="radio" name="rating" value="Good"/>Good
+					<input type="radio" name="rating" value="Satisfactory"/>Satisfactory
+					<input type="radio" name="rating" value="Poor"/>Poor<br/><br/>
+					<label>Any Comments:</label>
+					<textarea id="comments" placeholder="Type your comments here" name="anyComments" cols="42" row="20"></textarea><br/><br/>
+					<input type="submit" onclick="button()" name="submitQuery" value="Submit"/>
+					<input type="reset" name="reset" value="Reset"/>
+				</form>
+			</div>	
+			<script>
+				function button(){
+					var fName = document.getElementById( 'fName' ).value;
+					var email = document.getElementById( 'email' ).value;
+					var rating = document.querySelector('input[name="rating"]:checked').value;
+					var comments = document.getElementById( 'comments' ).value;
+					if(fName.length == 0 ||email.length == 0 ||comments.length == 0){
+						alert("Please fill each field");
+					}
+					else if(fName.charAt(0).match("[0-9]")){
+						alert("First letter of the name cannot be a numeric value");
+					}
+					else{
+						alert("Dear "+fName+", Thank you very much for your feedback."+
+						" You have rated our site as "+rating+" and your comment was "+comments+".");
+					}
+				}
+			</script>
+			<footer>
+				<hr>
+				<a class="cv" href="cv page/w1673620-deshan.html">Dehami Deshan Koswatte 2016198</a>
+				<p>Last modified date (Ex:13th of January 2018)</p>
+				<p>dehami.2016198@iit.ac.lk</p>
+			</footer>
+		</body>
+	</html>
