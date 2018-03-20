@@ -6,12 +6,16 @@ var summaryBody = document.getElementById("order-summary");
 
 function isAllFieldsChosen(){
 
+    var isFirstNameFilled = document.getElementById("text-field-fName").value;
+    var isLastNameFilled = document.getElementById("text-field-lName").value;
+    var isAddressFilled = document.getElementById("text-area-address").value;
+    var isContactFilled = document.getElementById("text-field-contact").value;
+
     var isAllProductTypesChosen = false;
 
     var isAllProductSizeChosen = false;
 
     for(let i=0; i<productTypeDropdowns.length; i++){
-        console.log(productTypeDropdowns);
         if(productTypeDropdowns[i].value!="-Select your desired merchandise item-") isAllProductTypesChosen = true;
         else isAllProductTypesChosen = false;
     }
@@ -23,9 +27,12 @@ function isAllFieldsChosen(){
 
     let submitFormButton = document.getElementById("btnSubmitForm");
 
-    if(isAllProductTypesChosen && isAllProductSizeChosen)
-        submitFormButton.disabled = false;
-    else if(!isAllProductTypesChosen || !isAllProductSizeChosen) submitFormButton.disabled = true;
+    if(isAllProductTypesChosen && isAllProductSizeChosen && 
+        isFirstNameFilled && isLastNameFilled && isAddressFilled
+            &&isContactFilled
+        )
+            submitFormButton.disabled = false;
+    else submitFormButton.disabled = true;
 };
 
 function processOrder() {
