@@ -5,17 +5,19 @@
 		<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
 			<title>Feedback Form</title>
 		</head>
-		<body> 
+		<body>
+			<div id="font-size-slider-div">
+				<input id="font-size-slider" onchange="resizeFont()" type="range" min="1" max="5" value="3"/>
+			</div> 
 			<div class="top">
-				<a href="homepage.html">Home</a>
-				<a href="#news">News</a>
-			    <a href="#contact">Contact</a>
-			    <a href="#about">About</a>
-				<a class="active" href="feedback-form.html">Feedback</a>
-			</div>	
+					<a href="../homepage.html">Home</a>
+					<a href="product-order/order.html">Shop</a>
+					<a href="#">Quiz</a>
+					<a href="#">Portfolio</a>
+					<a class="active" href="../feedback-form.html">Feedback</a>
+			</div>
 			<h3>Comments Form</h3>
-			<div>
-				<form>
+			<form>
 					<label>Full name:</label>
 					<input id="fName" type="text" name="fullName" placeholder="Full Name"/><br/><br/>
 					<label>Email:</label>
@@ -30,8 +32,7 @@
 					<textarea id="comments" placeholder="Type your comments here" name="anyComments" cols="42" row="20"></textarea><br/><br/>
 					<input type="submit" onclick="button()" name="submitQuery" value="Submit"/>
 					<input type="reset" name="reset" value="Reset"/>
-				</form>
-			</div>	
+			</form>	
 			<script>
 				function button(){
 					var fName = document.getElementById( 'fName' ).value;
@@ -49,6 +50,22 @@
 						" You have rated our site as "+rating+" and your comment was "+comments+".");
 					}
 				}
+			</script>
+			<script>
+					let scaleValue = parseInt(document.getElementById("font-size-slider").value);
+		
+					function resizeFont(){
+						let newScaleValue = parseInt(document.getElementById("font-size-slider").value);
+						let elements = document.querySelector("body").children;
+						for(var i=0; i<elements.length; i++){
+							for(var x=0; x<elements[i].children.length; x++){
+								let initial = parseInt(window.getComputedStyle(elements[i].children[x],null).fontSize);
+								let newSize = initial+((newScaleValue-scaleValue)*2.5);
+								elements[i].children[x].setAttribute("style","font-size:"+newSize+"px");
+							}
+						}	
+						scaleValue = newScaleValue;
+					};
 			</script>
 			<footer>
 				<hr>
