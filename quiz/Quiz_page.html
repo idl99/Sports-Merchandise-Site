@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/Styles.css">
+</head>
+<header>
+		<h1>Football Quiz</h1>
+	 </header>
+<body>
+		<article>
+		<div class="top">
+				<a href="../homepage.html" style="margin-left: 400px;">Home</a>
+				<a href="../product-order/order.html">Shop</a>
+			    <a class="active" href="#">Quiz</a>
+			    <a href="../thamindu/portfolio.html">Portfolio</a>
+				<a href="../feedback-form.html">Feedback</a>
+			</div>
+
+ <div id="timer"><center>2:00</center></div>
+ <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach "00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();
+}
+countdown(2);
+</script>     
+	<div class="main">
+		<div class="wrapper" onClick="showDropdown()">
+         
+			<span>1</span>/
+			<span>10</span>   
+		</div>
+		<ul class="dropdown">
+			<li>Question <span>1</span></li>
+			<li>Question <span>2</span></li>
+			<li>Question <span>3</span></li>
+			<li>Question <span>4</span></li>
+			<li>Question <span>5</span></li>
+            <li>Question <span>6</span></li>
+			<li>Question <span>7</span></li>
+			<li>Question <span>8</span></li>
+			<li>Question <span>9</span></li>
+			<li>Question <span>10</span></li>
+            
+		</ul>	
+		<p class="question"></p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="submit">Submit</button>
+	</div>
+	<script src="scripts/Script.js">
+	</script>
+	</article>
+</body>
+</html>
