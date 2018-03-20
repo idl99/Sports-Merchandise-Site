@@ -64,20 +64,20 @@
                         name="select-product-type" onchange="bindItemSizes(this); isAllFieldsChosen()">
 
                     <option disabled selected>-Select your desired merchandise item-</option>
-                    <option value="Mens' Full Kit">Mens' Full Kit</option>
-                    <option value="Mens' T-Shirt">Mens' T-Shirt</option>
-                    <option value="Mens' Short">Mens' Short</option>
+                    <option value="Mens' Full Kit:$30.00">Mens' Full Kit</option>
+                    <option value="Mens' T-Shirt:$30.00">Mens' T-Shirt</option>
+                    <option value="Mens' Short:$30.00">Mens' Short</option>
 
-                    <option value="Womens' Full Kit">Womens' Full Kit</option>
-                    <option value="Womens' T-Shirt">Womens' T-Shirt</option>
-                    <option value="Womens' Short">Womens' Short</option>
+                    <option value="Womens' Full Kit:$30.00">Womens' Full Kit</option>
+                    <option value="Womens' T-Shirt:$30.00">Womens' T-Shirt</option>
+                    <option value="Womens' Short:$30.00">Womens' Short</option>
 
-                    <option value="Kids' Full Kit">Kids' Full Kit</option>
-                    <option value="Kids' T-Shirt">Kids' T-Shirt</option>
-                    <option value="Kids' Short">Kids' Short</option>
+                    <option value="Kids' Full Kit:$15.00">Kids' Full Kit</option>
+                    <option value="Kids' T-Shirt:$15.00">Kids' T-Shirt</option>
+                    <option value="Kids' Short:$15.00">Kids' Short</option>
 
-                    <option value="Trainers - Adidas">Trainers - Adidas</option>
-                    <option value="Trainers - New Balanace">Trainers - New Balance</option>
+                    <option value="Trainers - Adidas:$50.00">Trainers - Adidas</option>
+                    <option value="Trainers - New Balanace:$50.00">Trainers - New Balance</option>
 
                 </select>
 
@@ -115,7 +115,7 @@
             </div>
             <div class="modal-body">
                 <div>
-                    <table id="order-summary">
+                    <table cellspacing="15" id="order-summary">
                         <tr>
                             <th>Quantity</th>
                             <th>Item</th>
@@ -129,17 +129,25 @@
                             <td class="cost"></td>
                         </tr>
                     </template>
+                    <h2 style="float:right">Your Grand Total: <label style="font-weight:1000" id="grandTotal"></label></h2>
                 </div>
             </div>
             <div class="modal-footer">
-                <h3>Do you wish to place order?</h3>
+                <h3>Do you wish to place order?</h3><br>
+                <input style="
+                background-color: greenyellow;
+                border: 1px solid black;
+                border-radius: 8px;
+                float: right;
+                height: 35px;
+                width: 130px;
+                " type="button" value="Checkout" />
             </div>
         </div>
     </div>
 
     <footer>
         <span><a href="../cv-pages/w1673607-ihan.html">Ihan Dilnath - w1673607 - 2016030</a></span><br>
-        <span>SE Tutorial Group B</span>
     </footer>
 
     <script src="order.js" type="text/javascript"></script>

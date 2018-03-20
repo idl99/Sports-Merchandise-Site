@@ -64,7 +64,8 @@ function getListOfOrderItems(productsAry, productSizesAry, itemQtyAry){
         listOfOrderItems.push(
             {
                 'quantity':itemQtyAry[i],
-                'item':productSizesAry[i] + " " + productsAry[i]
+                'item':productSizesAry[i] + " " + productsAry[i],
+                'cost':Number(productsAry[i].split(":")[1].replace('$',''))*itemQtyAry[i]
             }
         );
     }
@@ -79,13 +80,20 @@ function showOrderConfirmation(order) {
     let template = document.getElementById("template-summary-data");
     let item_template = document.importNode(template.content, true);
 
+    var total = 0;
+
     for(let i = 0; i < order.length; i++){
         let item = order[i];
         let row = item_template.cloneNode(true);
         row.querySelector(".quantity").innerHTML = item.quantity;
         row.querySelector(".item").innerHTML = item.item;
+        row.querySelector(".cost").innerHTML = item.cost;
+        total += item.cost;
         summaryBody.appendChild(row);
     }
+
+    document.getElementById("grandTotal").innerHTML = total;
+
 }
 
 function resetOrderSummary() {

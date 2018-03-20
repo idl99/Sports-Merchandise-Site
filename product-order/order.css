@@ -22,7 +22,12 @@
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
 }
-
+#order-summary{
+    margin-bottom: 25px;
+}
+td{
+    text-align: center;
+}
 /*
 ==================================================
             CSS FOR ORDER FORM
@@ -46,7 +51,7 @@
     margin: 20px auto;
 }
 .form-fieldset > legend{
-    font-family: "Roboto" !important;
+    font-family: "Arial" !important;
     font-weight: bold;
 }
 .form-fieldset{
@@ -54,6 +59,7 @@
     border-style: dashed;
 }
 form{
+    color: lightgrey;
     margin: 0px auto;
     width:75%;
 }
@@ -139,5 +145,4 @@ body{
 }
 *{
     font-family: "Open Sans";
-    color:white;
 }
