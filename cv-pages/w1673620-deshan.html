@@ -3,81 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet"> 
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Curriculum Vitae</title>
     <style>
-        #firstName{
-            color: goldenrod;
-            font-size: 3.5em;
+		body{
+            background-image: url("CvBackground.png");
+            background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: justify;
         }
-        #profile-pic{
+        #fName{
+            color: silver;
+            font-size: 3em;
+        }
+        #proPic{
             border-radius:50px;
-            height: 250px;
+            height: 225px;
             margin: auto;
         }
-        #cv-header>h1{
+        #header>h1{
             display: inline;
         }
-        #cv-header{
+        #header{
             color: white;
-            font-size: 18px;
             display: inline;
-            text-align: center;
-            margin: auto auto
+			font-size: 15px;
+            text-align: justify;
+            margin: auto;
         }
-        .cv-section{
-            border: 1px solid white;
-            font-size: 14px;
-            line-height: 40px;
-            font-weight: 750;
+        .section{
+			grid-column: 1/3;
+            border: 1px solid grey;
+			border-radius : 10px;
+            font-size: 20px;
             color: black;
-            grid-column: 1/3;
-            font-family: "Open Sans";
-            padding: 20px;
-            background-color: rgba(255,255,255,.75);
+            font-family: 'Iceland', cursive;
+			line-height: 40px;
+            padding: 10px;
+            background-color: #D8D8D8;
+			margin-bottom: 20px;
         }
-        #cv-header{
-            font-family: monospace;
-            font-size: 16px;
+        #header{
+            font-family: 'Iceland';
+            font-size: 22px;
         }
-        .container{
+        .mainContainer{
             display: grid;
             grid-template-columns: 3fr 1fr;
-            grid-gap: 25px;
-            margin: auto auto;
-            width: 50%
-        }
-        body{
-            background-image: url("wallpaper.jpg");
-            background-repeat: repeat-y;
-			text-align: justify;
+            width: 50%;
+			margin: 0 auto;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="mainContainer">
         
-        <div id="cv-header">
-            <h1 id="firstName">Deshan</h1>
+        <div id="header">
+            <h1 id="fName">Deshan</h1>
             <h1>Koswatte</h1>
             <h2>Informatics Institute of Technology</h2>
             <h2>dehami.2016198@iit.ac.lk</h2>
             <h2>0773884997</h2>
         </div>
         
-        <img src="w1673620-deshan.jpg" id="profile-pic" alt="My profile picture" />
+        <img src="my-pic.jpg" id="proPic" alt="My profile picture" />
 
-        <div class="cv-section">
+        <div class="section">
             <h1>Personal Details</h1>
             <p>I'm Deshan Koswatte. I was born on 1999 October 20th currently being over years old. I was born in 
-				Rathnapura. I have a few hobbies, which includes programming, reading. But mainly swimming as I have won
-				many awards in the recent past but unfortunately I had to stop swimming because I'm running out of
-				time with the acedemic work. Currently I'm following the degree course at IIT to be a software engineer.
+				Rathnapura and surrently lives at Homagama, Colombo. Currently I'm engaged with a degree program in the path of Software
+				Engineering and I hope to be a software engineer in the near future as I'm still at the first year of the
+				program.
             </p>
         </div>
         
-        <div class="cv-section">
+        <div class="section">
             <h1>Educational Profile</h1>
             <p>
 				In my primary stages I studied at Royal International School, Kurunegala.
@@ -89,7 +93,7 @@
             </p>
         </div>
 
-        <div class="cv-section">
+        <div class="section">
             <h1>Awards and Achievements</h1>
             <ul>
                 <li id="award">
@@ -100,51 +104,108 @@
                 </li>
 				<li>
 					Gateway College - Champion Swimmer
-					2013/2014/2016
+					2013 / 2014 / 2016
             </ul>
         </div>
 
-        <div class="cv-section">
-            <h1>Skills</h1>
+        <div class="section">
+            <h1>Following Modules & Followed Modules</h1>
             <ul>
-                <li>Web Development
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Bootstrap</li>
-                        <li>WordPress</li>
-                    </ul>
-                </li>
-                <li>Desktop/GUI Applications
-                    <ul>
-                        <li>Java</li>
-                        <li>Java Swing</li>
-                        <li>Java FX</li>
-                        <li>Python</li>
-                    </ul>
-                </li>
-                <li>Databases
-                    <ul>
-                        <li>Microsoft SQL</li>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                    </ul> 
-                </li>
-                <li>Arduino</li>
-                <li>Other Tools
-                    <ul>
-                        <li>Git</li>
-                        <li>Terminal/Command Line</li>
-                        <li>Morphia ODM for Mongo</li>
-                        <li>Maven</li>
-                        <li>IntelliJ IDEA</li>
-                        <li>VS Code</li>
-                    </ul>
-                </li>
-            </ul>
+				<li>Foundation</li>
+				<ul>
+					<li>Mathematics</li>
+					<li>Introduction to IT</li>
+					<li>English</li>
+					<li>Programming</li>
+					<li>Databases</li>
+					<li>Digital Circuits and Logic Design</li>
+					<li>Software Development Group Project</li>
+				</ul>	
+				<li>First Year </li>
+				<ul>
+					<li>Programming Principles I</li>
+					<li>Programming Principles II</li>
+					<li>Web Design & Development</li>
+					<li>Computer Science Fundamentals</li>
+					<li>Computer Science Practice</li>
+					<li>Mathematics for Computing</li>
+				</ul>	
+			</ul>	
         </div>
+		
+		<div class="section">
+			<h1>Skills Summary</h1>
+			<ul>
+				<li>Programming Languages</li>
+				<ul>
+					<li>Java</li>
+					<li>Python</li>
+				</ul>
+				<li>GUI Programming</li>
+				<ul>
+					<li>JavaFx</li>
+					<li>Java Swing</li>
+					<li>JFrame</i>
+				</ul>
+				<li>Databases</li>
+				<ul>
+					<li>MySQL</li>
+					<li>Mongo DB(Non SQL)</li>
+				</ul>
+				<li>Web Development</li>
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>Bootstrap</li>
+					<li>XML</li>
+					<li>PHP</li>
+				</ul>
+				<li>Aditional Tools</li>
+				<ul>
+					<li>InteliJ</li>
+					<li>Eclipse</li>
+					<li>Maven</li>
+					<li>Stackoverflow</li>
+					<li>Git Hub</li>
+					<li>Arduino</li>
+				</ul>
+				<li>Researching and Reading</li>
+				<ul>
+					<li>jQuery</li>
+					<li>Wordpress</li>
+					<li>AJAX</li>
+				</ul>
+			</ul>	
+		</div>
+		
+		<div class="section">
+			<h1>Languages</h1>
+			<ul>
+				<li>English</li>
+				<li>Sinhala</li>
+			<ul>
+		</div>
+		
+		<div class="section">
+			<h1>Hobbies and Interests</h1>
+			<ul>
+				<li>Swimming</li>
+				<li>Running</li>
+				<li>Programming</li>
+				<li>Reading Programming related books</li>
+				<li>Watching Movies</li>
+				<li>Playing Games</li>
+			</ul>
+		</div>
 
+		<div class="section">
+			<h1>Contact Information</h1>
+			<ul>
+				<li>Email Address : dehami.2016198@gmail.com</li>
+				<li>Telephone Number : 0773884997</li>
+			<ul>	
+		</div>
     </div>
 </body>
 </html>
